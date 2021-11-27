@@ -78,3 +78,23 @@ if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "qu
 else {
     console.log("FINALMENTE, descanso merecido UwU");
 }
+
+let situation = "aprovado";
+
+switch (situation){
+
+    case "aprovado":
+        console.log("Aprovado");
+        break;
+
+    case "lista":
+        console.log("Na lista de espera");
+        break;
+
+    case "reprovado":
+        console.log("Reprovado");
+        break;
+
+    default:
+        console.log("não se aplica");
+}
