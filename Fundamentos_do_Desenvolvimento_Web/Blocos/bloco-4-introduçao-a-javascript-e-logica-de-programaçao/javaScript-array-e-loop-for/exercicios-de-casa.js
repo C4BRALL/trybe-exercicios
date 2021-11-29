@@ -43,3 +43,11 @@ for(let prepare = 0; prepare < numbers.length; prepare += 1){
     }
 }
 console.log("quantidade de numeros impares: " + impar);
+
+let minusNumber = greatNumber;
+for(let cont = 0; cont < numbers.length; cont += 1){
+    if(numbers[cont] < minusNumber){
+        minusNumber = numbers[cont];
+    }
+}
+console.log("menor numero da array: " + minusNumber);
