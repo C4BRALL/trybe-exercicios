@@ -34,3 +34,26 @@ if(a + b + c === 180){
     console.log("false");
 }
 
+const movimento = "Rei";
+switch(movimento.toLowerCase()){
+    case "rei":
+        console.log("Pode mover-se em qualquer direção, porém apenas uma casa por vez, como indicam os pontos vermelhos na figura abaixo.");
+        break;
+    
+
+    case "dama":
+        console.log("Assim como o Rei, pode mover-se em qualquer direção (vertical, horizontal e diagonal), porém quantas casas quiser, desde que estejam livres.");
+        break;
+    
+    case "torre":
+        console.log("Move-se em linha reta, tanto na vertical quanto na horizontal, quantas casas quiser.");
+        break;
+
+
+
+    default:
+        console.log("nao existe esta peça no xadrez")
+        break;
+
+    
+}
