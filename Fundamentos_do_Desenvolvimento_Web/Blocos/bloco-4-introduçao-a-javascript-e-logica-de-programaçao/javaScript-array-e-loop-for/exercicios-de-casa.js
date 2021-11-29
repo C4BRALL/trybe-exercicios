@@ -51,3 +51,13 @@ for(let cont = 0; cont < numbers.length; cont += 1){
     }
 }
 console.log("menor numero da array: " + minusNumber);
+
+
+let pushNumbers = [];
+
+for(pushIndex = 0; pushIndex < 6; pushIndex += 1 ){
+    pushNumbers.push(Math.floor(Math.random() * 24) + 1);
+}
+for(let num of pushNumbers){
+    console.log(num);
+}
