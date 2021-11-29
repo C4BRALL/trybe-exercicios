@@ -1,6 +1,6 @@
-const a = 15;
-const b = 13;
-const c = -4;
+const a = 60;
+const b = 40;
+const c = 80;
 
 console.log(a+b);
 console.log(a-b);
@@ -27,3 +27,10 @@ if(c > 0){
 }else{
     console.log("Negativo");
 }
+
+if(a + b + c === 180){
+    console.log("True");
+}else{
+    console.log("false");
+}
+
