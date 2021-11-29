@@ -1,6 +1,8 @@
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
+console.log(numbers.length);
+
 for(let number of numbers){
     console.log(number);
 }
@@ -12,3 +14,6 @@ for(let index = 0; index < numbers.length; index += 1){
     soma += numbers[index];
 }
 console.log("soma da array: " + soma);
+
+soma = soma/numbers.length;
+console.log("media aritimetica da array: " + soma);
