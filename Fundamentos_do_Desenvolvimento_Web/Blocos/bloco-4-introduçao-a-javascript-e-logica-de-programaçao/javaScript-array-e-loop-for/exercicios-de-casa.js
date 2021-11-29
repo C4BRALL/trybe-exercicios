@@ -23,3 +23,12 @@ if(soma > 20){
 }else{
     console.log("valor menor ou igual a 20");
 }
+
+let greatNumber = 0;
+
+for(let count = 0; count < numbers.length; count += 1){
+    if(numbers[count] > greatNumber){
+        greatNumber = numbers[count]; 
+    }
+}
+console.log("numero maior da array: " + greatNumber);
