@@ -1,1 +1,1 @@
-Local de estudos sobre a logida de programaçao
+Local de estudos sobre a logica de programaçao
