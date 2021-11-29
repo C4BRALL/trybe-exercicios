@@ -28,7 +28,18 @@ let greatNumber = 0;
 
 for(let count = 0; count < numbers.length; count += 1){
     if(numbers[count] > greatNumber){
-        greatNumber = numbers[count]; 
+        greatNumber = numbers[count];
     }
 }
+
 console.log("numero maior da array: " + greatNumber);
+
+let impar = 0;
+
+for(let prepare = 0; prepare < numbers.length; prepare += 1){
+    let compare = numbers[prepare];
+    if(compare % 2 != 0){
+        impar += 1;
+    }
+}
+console.log("quantidade de numeros impares: " + impar);
