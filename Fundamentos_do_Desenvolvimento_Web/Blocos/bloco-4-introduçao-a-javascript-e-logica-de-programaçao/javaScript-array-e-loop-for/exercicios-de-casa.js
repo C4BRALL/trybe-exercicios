@@ -52,7 +52,7 @@ for(let cont = 0; cont < numbers.length; cont += 1){
 }
 console.log("menor numero da array: " + minusNumber);
 
-
+/////////////outra array/////////////////////////////////////////////////////////////
 let pushNumbers = [];
 
 for(pushIndex = 0; pushIndex < 6; pushIndex += 1 ){
@@ -60,4 +60,10 @@ for(pushIndex = 0; pushIndex < 6; pushIndex += 1 ){
 }
 for(let num of pushNumbers){
     console.log(num);
+}
+
+let divi = 0;
+for(let divIndex = 0; divIndex < pushNumbers.length; divIndex += 1){
+    divi = pushNumbers[divIndex]/2;
+    console.log(pushNumbers[divIndex] + " dividido por 2 = " + divi);
 }
