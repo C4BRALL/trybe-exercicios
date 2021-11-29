@@ -17,3 +17,9 @@ console.log("soma da array: " + soma);
 
 soma = soma/numbers.length;
 console.log("media aritimetica da array: " + soma);
+
+if(soma > 20){
+    console.log("valor maior que 20");
+}else{
+    console.log("valor menor ou igual a 20");
+}
