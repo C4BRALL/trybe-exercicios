@@ -1,4 +1,7 @@
-, const a = 60;
+exercicios/4.3
+const a = 60;
+const a = 60;
+master
 const b = 40;
 const c = 80;
 
@@ -49,12 +52,19 @@ switch(movimento.toLowerCase()){
         console.log("Move-se em linha reta, tanto na vertical quanto na horizontal, quantas casas quiser.");
         break;
 
+exercicios/4.3
     case "bispo":
         console.log
+
+master
 
 
     default:
         console.log("nao existe esta peça no xadrez")
         break;
 
+exercicios/4.3
+
+    
+master
 }
