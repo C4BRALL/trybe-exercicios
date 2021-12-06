@@ -11,3 +11,4 @@ console.log(document.querySelector('#elementoOndeVoceEsta').parentElement.nextSi
 console.log(document.getElementById('elementoOndeVoceEsta').parentElement.lastElementChild.previousElementSibling);
 
 console.log(document.getElementById('pai').lastElementChild.previousElementSibling);
+
