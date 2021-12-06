@@ -68,6 +68,15 @@
         }
         container.appendChild(newTagHone('Exercício 5.2 - JavaScript DOM'));
 
+        function newTagMainWithClass(classNames) {
+            let newMain = document.createElement('main');
+            newMain.className = classNames;
+            console.log(newMain);
+            return newMain;
+        }
+        container.appendChild(newTagMainWithClass('center-content'));
+
+        
     </script>
   </body>
 </html>
