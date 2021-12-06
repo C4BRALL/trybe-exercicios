@@ -76,39 +76,14 @@
         }
         container.appendChild(newTagMainWithClass('main-content'));
 
+        function newTagSectionWithClass(classNames) {
+            let newSection = document.createElement('section');
+            newSection.className = classNames;
+            console.log(newSection);
+            return newSection;
+        }
+        container.appendChild(newTagSectionWithClass('center-content'));
 
     </script>
   </body>
 </html>
-
-<!-- // let container = document.querySelector('#pai');
-
-// function creatDivAndClass(classNames){
-//     let newDiv = document.createElement('div');
-//     newDiv.className = classNames;
-//     console.log(newDiv);
-//     return newDiv;
-// }
-// container.appendChild(creatDivAndClass('nova div element'));
-
-// let newsection = document.querySelector('#elementoOndeVoceEsta')
-
-// function creatSectionAndClass(classSection){
-//     let newSection = document.createElement('section');
-//     newSection.className = classSection;
-//     console.log(newSection);
-//     return newSection;
-// }
-// newsection.appendChild(creatSectionAndClass('nova section element'));
-
-// function addElementAsChild(local, elemento) {
-//     local.appendChild(elemento);
-// }
-
-
-// let features = ['nova', 'nova2', 'nova3', 'nova4'];
-
-// for (feature of features) {
-//     let element = creatSectionAndClass(feature);
-//     addElementAsChild(container, element);
-// } -->
