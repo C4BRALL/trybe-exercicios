@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+        let container = document.getElementsByTagName('body')[0];
+        
+        function newTagHone(str){
+            let newHone = document.createElement('h1');
+            newHone.innerText = str;
+            console.log(newHone);
+            return newHone;
+        }
+        container.appendChild(newTagHone('Exercício 5.2 - JavaScript DOM'));
+
+        function newTagMainWithClass(classNames) {
+            let newMain = document.createElement('main');
+            newMain.className = classNames;
+            console.log(newMain);
+            return newMain;
+        }
+        container.appendChild(newTagMainWithClass('main-content'));
+
+        function newTagSectionWithClass(classNames) {
+            let newSection = document.createElement('section');
+            newSection.className = classNames;
+            console.log(newSection);
+            return newSection;
+        }
+        container.appendChild(newTagSectionWithClass('center-content'));
+
+        function newTagPforSectionWithText(str) {
+          let newP = document.createElement('p');
+          newP.innerText = str;
+          console.log(newP);
+          return newP;
+        }
+        container.appendChild(newTagPforSectionWithText('Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, repudiandae hic ab et quos nisi necessitatibus magnam placeat fugiat officia, laudantium quaerat nesciunt dolore fugit nihil minima illo accusantium blanditiis!'));
+        
+        let containerMain = document.querySelector('.main-content');
+
+        containerMain.appendChild(newTagSectionWithClass('left-content'));
+
+        containerMain.appendChild(newTagSectionWithClass('right-content'));
+
+        let image = document.querySelector('.left-content');
+
+        function newTagImg(source) {
+          let newImage = document.createElement('img');
+          newImage.className = 'small-image';
+          newImage.src = source;
+          console.log(newImage);
+          return newImage;
+        }
+        image.appendChild(newTagImg('https://picsum.photos/200'));
+
+
+    </script>
+  </body>
+</html>
