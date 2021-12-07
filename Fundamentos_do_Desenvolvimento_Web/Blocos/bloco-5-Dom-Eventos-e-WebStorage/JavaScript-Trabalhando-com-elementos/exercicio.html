@@ -56,6 +56,7 @@
     </style>
   </head>
   <body>
+
     <script>
       // COLOQUE SEU CÓDIGO AQUI
         let container = document.getElementsByTagName('body')[0];
@@ -84,6 +85,17 @@
         }
         container.appendChild(newTagSectionWithClass('center-content'));
 
+        function newTagPforSectionWithText(str) {
+          let newP = document.createElement('p');
+          newP.innerText = str;
+          console.log(newP);
+          return newP;
+        }
+        container.appendChild(newTagPforSectionWithText('Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, repudiandae hic ab et quos nisi necessitatibus magnam placeat fugiat officia, laudantium quaerat nesciunt dolore fugit nihil minima illo accusantium blanditiis!'));
+        
+        
+
     </script>
+
   </body>
 </html>
