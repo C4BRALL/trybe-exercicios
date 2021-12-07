@@ -56,7 +56,6 @@
     </style>
   </head>
   <body>
-
     <script>
       // COLOQUE SEU CÓDIGO AQUI
         let container = document.getElementsByTagName('body')[0];
@@ -94,12 +93,23 @@
         container.appendChild(newTagPforSectionWithText('Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, repudiandae hic ab et quos nisi necessitatibus magnam placeat fugiat officia, laudantium quaerat nesciunt dolore fugit nihil minima illo accusantium blanditiis!'));
         
         let containerMain = document.querySelector('.main-content');
+
         containerMain.appendChild(newTagSectionWithClass('left-content'));
 
         containerMain.appendChild(newTagSectionWithClass('right-content'));
 
+        let image = document.querySelector('.left-content');
+
+        function newTagImg(source) {
+          let newImage = document.createElement('img');
+          newImage.className = 'small-image';
+          newImage.src = source;
+          console.log(newImage);
+          return newImage;
+        }
+        image.appendChild(newTagImg('https://picsum.photos/200'));
+
 
     </script>
-
   </body>
 </html>
