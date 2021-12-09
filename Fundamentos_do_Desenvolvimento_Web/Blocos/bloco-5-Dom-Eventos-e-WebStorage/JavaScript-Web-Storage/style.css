@@ -1,0 +1,84 @@
+body {
+    padding: 2rem;
+    background-color: rgb(250, 250, 250);
+}
+
+#title{
+    text-align: center;
+    max-width: 80%;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 90px;
+    font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
+    margin: 0px;
+}
+
+h2, h3 {
+    text-indent: 23px;
+    line-height: 20.5px;
+    margin-bottom: 1px;
+    font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4, h5 {
+    font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
+    margin: 0px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 15px;
+    font-size: 16.5px;
+    margin-top: 10px;
+    color: rgb(22, 22, 22);
+    font-family: Georgia,Times New Roman,Times,serif;
+}
+
+hr {
+    max-width: 65%;
+    text-align: center;
+    display: block;
+    border: 0px;
+    height: 1px;
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.75),rgba(0,0,0,0));
+}
+
+#panes {
+    display: table;
+    max-width: 80%;
+}
+
+#pane-left {
+    display: table-cell;
+    float: left;
+    max-width: 45%;
+    position: relative;
+}
+
+#pane-right {
+    display: table-cell;
+    float: right;
+    max-width: 45%;
+    position: relative;
+}
+
+#content-bottom {
+    text-align:left;    
+    max-width: 80%;
+    position: relative;  
+
+
+}
+
+nav {
+    margin: 0px;
+    position: fixed;
+    max-width: 15%;
+    right: 10%;
+}
