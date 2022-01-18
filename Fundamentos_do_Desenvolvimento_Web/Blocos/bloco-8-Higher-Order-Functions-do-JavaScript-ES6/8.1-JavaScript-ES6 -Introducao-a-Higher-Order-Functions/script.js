@@ -1,8 +1,14 @@
-const newEmployees = () => {
-  const employees = {
-    id1: '', // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
-    id2: '', // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
-    id3: '', // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
-  }
-  return employees;
+const employees = {
+  id1: 'Pedro Guerra', 
+  id2: 'Luiza Drumond', 
+  id3: 'Carla Paiva',
+  greet: function(callback, id) {
+    const message = callback(id);
+    return message;
+  },
 };
+const greeting = (id) => {
+  return `Ola querido ${id}!!!`
+};
+
+console.log(employees.greet(greeting, "Olaf"));
