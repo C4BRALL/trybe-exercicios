@@ -69,7 +69,7 @@ console.log("Warrior damage: " + warrior.damage(damageWarrior, 30, 2));
 console.log(warrior);
 console.log('');
 console.log("Mage:");
-console.log("Mage damage: " + mage.damage(damageMage, 45, 125) +"  Mana: " + mage.manaTotal(manaT, 125));
+console.log("Mage damage: " + mage.damage(damageMage, 45, mage.mana) +"  Mana: " + mage.manaTotal(manaT, mage.mana));
 console.log(mage);
 
 
