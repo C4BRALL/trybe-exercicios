@@ -10,7 +10,8 @@
 const mage = {
   healthPoints: 130,
   intelligence: 45,
-  mana: (callback, manaT, mana) => {
+  mana: 125,
+  manaTotal: (callback, manaT, mana) => {
     const manatotal = callback(manaT, mana);
     return manatotal;
   },
@@ -31,7 +32,7 @@ manaT = (mana) => {
   if (mana < 15) {
     return "Não possui mana suficiente";
   }
-  return mana - 15;
+  return mage.mana = mana - 15;
 }
 
 const warrior = {
@@ -59,9 +60,20 @@ damageDragon = (strength) => {
   return Math.floor(Math.random() * ((strength) - 15 + 1) ) + 15;
 };
 
-console.log("Dragon damage: " + warrior.damage(damageDragon, 50));
+console.log("Dragon:");
+console.log("Dragon damage: " + dragon.damage(damageDragon, 50));
+console.log(dragon);
+console.log('');
+console.log("Warrior:");
 console.log("Warrior damage: " + warrior.damage(damageWarrior, 30, 2));
-console.log("Mage damage: " + mage.damage(damageMage, 45, 125) +"  Mana: " + mage.mana(manaT, 125));
+console.log(warrior);
+console.log('');
+console.log("Mage:");
+console.log("Mage damage: " + mage.damage(damageMage, 45, 125) +"  Mana: " + mage.manaTotal(manaT, 125));
+console.log(mage);
+
+
+
 
 const battleMembers = { mage, warrior, dragon };
 
