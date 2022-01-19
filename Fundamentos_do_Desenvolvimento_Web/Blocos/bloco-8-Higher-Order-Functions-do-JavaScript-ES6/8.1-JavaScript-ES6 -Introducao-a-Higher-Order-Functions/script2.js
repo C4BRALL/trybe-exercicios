@@ -15,5 +15,4 @@ const myFunc = (fullName) => {
   const email = `${fullName}@trybe.com`.toLowerCase().split(' ').join('_');
   return {name: fullName, email};
 }
-
 console.log(newEmployees(myFunc));
