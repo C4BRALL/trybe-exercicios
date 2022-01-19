@@ -12,6 +12,26 @@ const mage = {
     return danger;
   },
 };
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage: undefined,
+  atack:  (callback, strength, weaponDmg) => {
+    const danger = callback(strength, weaponDmg);
+    return danger;
+  },
+};
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage: undefined,
+  atack: (callback, strength) => {
+    const danger = callback(strength);
+    return danger;
+  },
+};
+
 damageMage = (intelligence, mana) => {
   if (mana < 15) {
     return "mana gasta 0";
@@ -29,31 +49,12 @@ manaT = (mana) => {
 }
 manaT(mage.mana);
 
-const warrior = {
-  healthPoints: 200,
-  strength: 30,
-  weaponDmg: 2,
-  damage: undefined,
-  atack:  (callback, strength, weaponDmg) => {
-    const danger = callback(strength, weaponDmg);
-    return danger;
-  },
-};
 damageWarrior = (strength, weaponDmg) => {
   const damageRAndom = Math.floor(Math.random() * ((strength + weaponDmg) - (strength) + 1) ) + (strength);
   return warrior.damage = damageRAndom;
 };
 damageWarrior(warrior.strength, warrior.weaponDmg);
 
-const dragon = {
-  healthPoints: 350,
-  strength: 50,
-  damage: undefined,
-  atack: (callback, strength) => {
-    const danger = callback(strength);
-    return danger;
-  },
-};
 damageDragon = (strength) => {
   const damageDragon = Math.floor(Math.random() * ((strength) - 15 + 1) ) + 15;
   return dragon.damage = damageDragon;
