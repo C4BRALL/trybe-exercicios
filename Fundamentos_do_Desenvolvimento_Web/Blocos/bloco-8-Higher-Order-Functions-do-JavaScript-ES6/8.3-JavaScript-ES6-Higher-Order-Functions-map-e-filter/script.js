@@ -69,3 +69,30 @@ const booksRead = books.map((book) => {
   };
 });
 console.table(booksRead);
+
+function compare(a, b) {
+  if (a.age < b.age) {
+    return -1;
+  }
+  if (a.age > b.age) {
+    return 1;
+  }
+  return 0;
+};
+
+const ageName = books.map((book) => {
+  const age =book.releaseYear - book.author.birthYear;
+  return {
+    age: age,
+    author: book.author.name,
+  };
+});
+
+const sortBooks = ageName.sort(compare);
+
+console.table(sortBooks);
+
+const fantasyOrScienceFiction = books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
+
+console.table(fantasyOrScienceFiction);
+
