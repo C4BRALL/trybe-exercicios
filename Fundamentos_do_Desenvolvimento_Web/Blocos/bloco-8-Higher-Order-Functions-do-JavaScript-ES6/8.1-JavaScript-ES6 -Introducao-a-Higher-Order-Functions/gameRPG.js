@@ -84,13 +84,13 @@ actionDragon(warrior.healthPoints, mage.healthPoints);
 const battleMembers = (dragon, warrior, mage) => {
   console.log('-----------------------------------------------------------------------------------------');
   console.log("Dragon:");
-  console.log(dragon);
+  console.table(dragon);
   console.log('-----------------------------------------------------------------------------------------');
   console.log("Warrior:");
-  console.log(warrior);
+  console.table(warrior);
   console.log('-----------------------------------------------------------------------------------------');
   console.log("Mage:");
-  console.log(mage);
+  console.table(mage);
   console.log('-----------------------------------------------------------------------------------------');
 }
 console.log(battleMembers(dragon, warrior, mage));
