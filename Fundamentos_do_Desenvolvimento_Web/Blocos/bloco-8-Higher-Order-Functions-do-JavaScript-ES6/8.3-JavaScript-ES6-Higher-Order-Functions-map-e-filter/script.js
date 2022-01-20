@@ -61,4 +61,11 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+const booksRead = books.map((book) => {
+  return {
+    name: book.name,
+    genre: book.genre,
+    author: book.author.name,
+  };
+});
+console.table(booksRead);
