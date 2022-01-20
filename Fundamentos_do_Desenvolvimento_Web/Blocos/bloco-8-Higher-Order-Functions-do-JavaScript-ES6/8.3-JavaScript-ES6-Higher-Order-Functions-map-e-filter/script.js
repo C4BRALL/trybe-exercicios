@@ -101,10 +101,25 @@ function compareRealease(a, b) {
   }
   return 0;
 };
-
 const oldBooksOrdered = books.filter((book) => {
   const releaseAge = 2022 - book.releaseYear;
   return releaseAge > 60;
 });
 const sortRelease = oldBooksOrdered.sort(compareRealease);
 console.table(sortRelease);
+
+const fantasyOrScienceFictionAuthors = fantasyOrScienceFiction.map((book) => {
+  return {
+    name: book.author.name,
+  };
+});
+function compareName(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+};
+console.table(fantasyOrScienceFictionAuthors.sort(compareName));
