@@ -70,6 +70,13 @@ const booksRead = books.map((book) => {
 });
 console.table(booksRead);
 
+const ageName = books.map((book) => {
+  const age = book.releaseYear - book.author.birthYear;
+  return {
+    age: age,
+    author: book.author.name,
+  };
+});
 function compare(a, b) {
   if (a.age < b.age) {
     return -1;
@@ -79,20 +86,25 @@ function compare(a, b) {
   }
   return 0;
 };
-
-const ageName = books.map((book) => {
-  const age =book.releaseYear - book.author.birthYear;
-  return {
-    age: age,
-    author: book.author.name,
-  };
-});
-
 const sortBooks = ageName.sort(compare);
-
 console.table(sortBooks);
 
 const fantasyOrScienceFiction = books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
-
 console.table(fantasyOrScienceFiction);
 
+function compareRealease(a, b) {
+  if (a.releaseYear < b.releaseYear) {
+    return -1;
+  }
+  if (a.releaseYear > b.releaseYear) {
+    return 1;
+  }
+  return 0;
+};
+
+const oldBooksOrdered = books.filter((book) => {
+  const releaseAge = 2022 - book.releaseYear;
+  return releaseAge > 60;
+});
+const sortRelease = oldBooksOrdered.sort(compareRealease);
+console.table(sortRelease);
