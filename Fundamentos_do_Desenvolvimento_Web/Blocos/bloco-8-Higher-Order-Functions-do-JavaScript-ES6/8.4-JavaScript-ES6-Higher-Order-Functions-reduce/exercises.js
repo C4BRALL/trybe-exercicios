@@ -91,3 +91,14 @@ const ages = age.reduce((acc, ccValue) => {
 console.log(ages/age.length);
 
 // 4 - Encontre o livro com o maior nome.
+function compareLength(a, b) {
+  if (a.author.name.length < b.author.name.length) {
+    return 1;
+  }
+  if (a.author.name.length > b.author.name.length) {
+    return -1;
+  }
+  return 0;
+};
+const sortBooks = books.sort(compareLength);
+console.log(sortBooks[0].author.name);
