@@ -72,8 +72,10 @@ const books = [
 ];
 
 // 2 - Crie uma string com os nomes de todas as pessoas autoras.
-
-
+const booksAuthors = books.reduce((acc, ccValue) => {
+  return `${acc} ${ccValue.author.name}`
+}, 'Authors: ');
+console.log(booksAuthors);
 // 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 
 
