@@ -5,10 +5,8 @@ const arrays = [
   [4, 5, 6],
 ];
 
-function flatten() {
-  // escreva seu código aqui
-}
-
+const flatten = arrays.map((array) => `${array}`);
+console.log(flatten);
 // Para os exercícios 2, 3 e 4 considere o seguinte array:
 const books = [
   {
@@ -74,7 +72,6 @@ const books = [
 ];
 
 // 2 - Crie uma string com os nomes de todas as pessoas autoras.
-// Adicione o código do exercício aqui:
 
 
 // 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
