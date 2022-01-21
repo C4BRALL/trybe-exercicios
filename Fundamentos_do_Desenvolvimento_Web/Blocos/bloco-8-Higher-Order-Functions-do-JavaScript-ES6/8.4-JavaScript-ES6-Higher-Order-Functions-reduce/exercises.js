@@ -76,7 +76,18 @@ const booksAuthors = books.reduce((acc, ccValue) => {
   return `${acc} ${ccValue.author.name}`
 }, 'Authors: ');
 console.log(booksAuthors);
-// 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 
+// 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
+const age = books.map((book) => {
+  const age = book.releaseYear - book.author.birthYear;
+  return {
+    age: age,
+  };
+});
+const ages = age.reduce((acc, ccValue) => {
+  acc += ccValue.age;
+  return acc;
+}, 0);
+console.log(ages/age.length);
 
 // 4 - Encontre o livro com o maior nome.
