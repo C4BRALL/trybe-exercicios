@@ -16,12 +16,51 @@ function append(data) {
   ul.appendChild(li);
 }
 
-function fetchPokemon() {
-  const promise = (fetch('https://pokeapi.co/api/v2/pokemon/ditto'));
-
-  promise.then((response) => {
-    console.log(response);
-  });
+function extract(data) {
+  return {
+    name: data.name,
+    imageUrl: data.sprites.front_default,
+  }
 }
 
-window.onload = fetchPokemon;
+function fetchPokemonAPI(poke) {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${poke}`)
+    .then((response) => response.json())
+  //   .then((data) => {
+  //     const pokemon = extract(data);
+  //     append(pokemon);
+  //   })
+  // .catch( (error) => console.log('error') )
+}
+
+// function requestPokemon() {
+  
+// }
+
+function requestOrdered() {
+  Promise.all([
+    fetchPokemonAPI('pikachu'),
+    fetchPokemonAPI('ditto'),
+    fetchPokemonAPI('charmander'),
+    fetchPokemonAPI('bulbasaur'),
+    fetchPokemonAPI('squirtle')
+  ])
+
+  // .then((dataList) => {
+  //   const pokes = dataList.map((pokeData) => extract(pokeData))
+  //   pokes.forEach((pokemon) => {
+  //     append(pokemon)
+  //   })
+  // })
+
+  .then((dataList) => dataList.map((pokeData) => {
+    return extract(pokeData);
+  }))
+  .then((pokeList) => pokeList.forEach((pokemon) => {
+    append(pokemon)
+  }))
+
+  .catch((error) => console.log('error'))
+}
+
+window.onload = requestOrdered;
