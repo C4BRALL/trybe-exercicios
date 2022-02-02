@@ -37,14 +37,26 @@ function fetchPokemonAPI(poke) {
   
 // }
 
-function requestOrdered() {
-  Promise.all([
-    fetchPokemonAPI('pikachu'),
-    fetchPokemonAPI('ditto'),
-    fetchPokemonAPI('charmander'),
-    fetchPokemonAPI('bulbasaur'),
-    fetchPokemonAPI('squirtle')
-  ])
+async function fetchAsyncAwait() {
+  try {
+    const pokeDataList = await Promise.all([
+      fetchPokemonAPI('pikachu'),
+      fetchPokemonAPI('ditto'),
+      fetchPokemonAPI('charmander'),
+      fetchPokemonAPI('bulbasaur'),
+      fetchPokemonAPI('squirtle')
+    ])
+  
+    const pokeList = pokeDataList.map((pokeData) => {
+      return extract(pokeData);
+    })
+  
+    pokeList.forEach((pokemon) => {
+      append(pokemon);
+    }) 
+  } catch(error) {
+    console.log('error');
+  }
 
   // .then((dataList) => {
   //   const pokes = dataList.map((pokeData) => extract(pokeData))
@@ -53,14 +65,14 @@ function requestOrdered() {
   //   })
   // })
 
-  .then((dataList) => dataList.map((pokeData) => {
-    return extract(pokeData);
-  }))
-  .then((pokeList) => pokeList.forEach((pokemon) => {
-    append(pokemon)
-  }))
+  // .then((dataList) => dataList.map((pokeData) => {
+  //   return extract(pokeData);
+  // }))
+  // .then((pokeList) => pokeList.forEach((pokemon) => {
+  //   append(pokemon)
+  // }))
 
-  .catch((error) => console.log('error'))
+  // .catch((error) => console.log('error'))
 }
 
-window.onload = requestOrdered;
+window.onload = fetchAsyncAwait;
