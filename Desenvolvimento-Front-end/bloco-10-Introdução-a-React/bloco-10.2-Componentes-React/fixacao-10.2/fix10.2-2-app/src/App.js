@@ -29,7 +29,7 @@ class App extends React.Component {
       <div className="App">
         <h1> Orders recently created </h1>
         <Order user={headphone.user} product={headphone.product} price={headphone.price}/>
-        <Order prods={energyDrink.user} product={energyDrink.product} price={energyDrink.price} />
+        <Order user={energyDrink.user} product={energyDrink.product} price={energyDrink.price} />
       </div>
     );
   }
