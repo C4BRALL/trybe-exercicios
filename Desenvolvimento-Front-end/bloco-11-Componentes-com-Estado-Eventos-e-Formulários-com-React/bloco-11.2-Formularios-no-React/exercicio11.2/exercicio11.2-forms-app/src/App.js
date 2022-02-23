@@ -1,9 +1,10 @@
 import './App.css';
+import Forms from './forms/Forms';
 
 function App() {
   return (
     <div className="App">
-          Learn React
+        <Forms />
     </div>
   );
 }
