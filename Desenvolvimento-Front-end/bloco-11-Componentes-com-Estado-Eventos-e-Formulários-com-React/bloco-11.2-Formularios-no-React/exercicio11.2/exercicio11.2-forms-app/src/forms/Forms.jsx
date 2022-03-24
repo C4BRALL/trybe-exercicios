@@ -76,11 +76,7 @@ class Forms extends React.Component {
             text="Others:"
             handleChange={ this.handleChange }
           />
-
-          <label htmlFor="">
-            
-          </label>
-
+          
           <label htmlFor="resume">
             Resume:
             <textarea 
